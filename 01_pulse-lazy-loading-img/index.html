@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="blurs">
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper2.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper3.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper4.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper5.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper6.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper7.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper8.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper9.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper10.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper11.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper12.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper13.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper14.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper15.jpg" alt="blur" loading="lazy">
+    </div>
+
+    <div class="blur_load" style="background-image: url('./images/img_blur.jpg');">
+      <img src="./images/paper16.jpg" alt="blur" loading="lazy">
+    </div>
+  </div>
+
+  <script>
+    const blurLoad = document.querySelectorAll('.blur_load');
+    blurLoad.forEach(blur => {
+      const img = blur.querySelector("img");
+
+      function loaded() {
+        console.log('loaded');
+        blur.classList.add('loaded')
+      }
+
+      if (img.complete) {
+        loaded()
+      } else {
+        img.addEventListener('load', loaded)
+      }
+    })
+
+  </script>
+</body>
+
+</html>

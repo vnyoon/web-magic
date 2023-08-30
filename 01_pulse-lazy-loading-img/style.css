@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.blurs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+}
+
+/* 调整占位图样式 */
+.blur_load {
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+/* 添加脉冲样式 */
+.blur_load::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, .1);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.blur_load img {
+  opacity: 0;
+}
+
+.blur_load.loaded img {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.blur_load.loaded::before {
+  content: none;
+}
