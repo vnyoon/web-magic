@@ -1,0 +1,53 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #1d1e23;
+  --primary-color: #ffffff;
+  --second-color: #bd53ed;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background-color: var(--body-color);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+h1 span {
+  color: var(--second-color);
+  position: relative;
+}
+h1 span::before {
+  content: "";
+  width: 2px;
+  height: 30px;
+  background-color: var(--second-color);
+  
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  animation: blink .7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+h1 span.stop-blinking::before {
+  animation: none;
+}
