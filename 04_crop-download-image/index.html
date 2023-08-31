@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop and Download Image</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="image-container">
+        <img id="image">
+      </div>
+
+      <div class="preview-container">
+        <img id="preview-image">
+      </div>
+    </div>
+
+    <input type="file" id="file" accept="image/*">
+    <label for="file">Choose A Photo</label>
+
+    <div class="options hide">
+      <input 
+        type="number" 
+        id="width-input"
+        placeholder="Enter Wiedth"
+        max="780"
+      />
+
+      <input 
+        type="number" 
+        id="height-input" 
+        placeholder="Enter Height" 
+        max="780"
+      />
+
+      <button class="aspect-ratio-button">16:9</button>
+      <button class="aspect-ratio-button">4:3</button>
+      <button class="aspect-ratio-button">1:1</button>
+      <button class="aspect-ratio-button">2:3</button>
+      <button class="aspect-ratio-button">Free</button>
+    </div>
+
+    <div class="btns">
+      <button id="preview" class="hide">Preview</button>
+
+      <a href="" id="download" class="hide">Download</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
