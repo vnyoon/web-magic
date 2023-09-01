@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --box-w: 300px;
+  --box-h: 300px;
+  /* --box-w: 480px;
+  --box-h: 340px; */
+  --pixel-w-h: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+}
+
+.box {
+  position: relative;
+  width: var(--box-w);
+  height: var(--box-h);
+}
+.box span {
+  position: absolute;
+  width: var(--pixel-w-h);
+  height: var(--pixel-w-h);
+  /* background-image: url(./cmbk.gif); */
+  background-image: url(./logo.jpg);
+  background-repeat: no-repeat;
+
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0%, 10% {
+    scale: 1;
+    rotate: 0deg;
+    translate: 0 0;
+    transform-origin: center;
+  }
+
+  20%, 30% {
+    scale: 0.5;
+    rotate: 0deg;
+    translate: 0 0;
+    transform-origin: center;
+  }
+
+  40% {
+    scale: 0.5;
+    rotate: 360deg;
+    translate: 150px 0;
+    transform-origin: 100px;
+  }
+
+  70% {
+    scale: 0.5;
+    rotate: 720deg;
+    translate: -150px 0;
+    transform-origin: -100px;
+  }
+
+  90% {
+    scale: 2.5;
+    rotate: 0deg;
+    translate: 0 0;
+    transform-origin: center;
+  }
+
+  100% {
+    scale: 1;
+    rotate: 0deg;
+    translate: 0 0;
+    transform-origin: center;
+  }
+}
