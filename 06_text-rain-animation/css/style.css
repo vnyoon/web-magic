@@ -1,0 +1,89 @@
+/*google-fonts*/
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); */
+@import './google-fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #181c1f;
+  --primary-color: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--body-color);
+}
+
+.container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, transparent, #0005);
+}
+
+.cloud {
+  position: relative;
+  top: 50px;
+  z-index: 100;
+
+  /* 横向云朵 */
+  width: 320px;
+  height: 100px;
+  background-color: var(--primary-color);
+  border-radius: 100px;
+
+  /* drop-shadow函数将阴影效果应用于投影图像 */
+  filter: drop-shadow(0 0 30px var(--primary-color));
+}
+.cloud::before {
+  content: "";
+  /* 左侧小云朵 */
+  width: 110px;
+  height: 110px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 40px;
+
+  /* 右侧大云朵 */
+  box-shadow: 90px 0 0 30px var(--primary-color);
+}
+
+.cloud .text {
+  position: absolute;
+  top: 40px;
+  height: 20px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+  color: var(--primary-color);
+  /* 为文字添加阴影，看上去发光，增加视觉效果 */
+  text-shadow: 0 0 5px var(--primary-color), 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
+  transform-origin: bottom;
+  animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  70% {
+    transform: translateY(290px) scale(1);
+  }
+
+  100% {
+    transform: translateY(290px) scale(1);
+  }
+}
