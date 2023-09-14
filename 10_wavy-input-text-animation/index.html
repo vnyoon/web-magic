@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Wavy Input Text Animation</title>
+</head>
+<body>
+  <div class="container">
+    <input type="text" required>
+
+    <label>Wavy&nbsp;Input&nbsp;Text&nbsp;Animation</label>
+  </div>
+
+  <script>
+    const label = document.querySelector(".container label");
+    const textList = label.innerText.split("");
+
+    label.innerHTML = textList.map((letter, i) => `<span style="transition-delay: ${i * 30}ms;filter: hue-rotate(${i * 10}deg);">${letter}</span>`).join("");
+  </script>
+</body>
+</html>

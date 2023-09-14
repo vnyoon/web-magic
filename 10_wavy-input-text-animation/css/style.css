@@ -1,0 +1,66 @@
+/*google-fonts*/
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); */
+@import './google-fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #29313a;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+}
+
+.container input {
+  width: 100%;
+  padding-block: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #999;
+  
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-size: 1.25em;
+  transition: 0.5s;
+}
+.container input:focus,
+.container input:valid {
+  border-bottom-color: #fff;
+}
+.container input:focus ~ label span,
+.container input:valid ~ label span {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0;
+  transform: translateY(-30px);
+}
+
+.container label {
+  position: absolute;
+  left: 0;
+  
+  font-size: 1.25em;
+  pointer-events: none;
+  color: #666;
+  user-select: none;
+}
+.container label span {
+  display: inline-flex;
+  flex-direction: row;
+
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  transition: .25s cubic-bezier(0.5, 1, 0.5, 1.5);
+}
