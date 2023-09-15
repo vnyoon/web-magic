@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+li {
+  list-style: none;
+}
+
+:root {
+  --h-head: 40px;
+  --w-mockup: calc(371px / 1.5);
+  --h-mockup: calc(673px / 1.5);
+}
+
+header {
+  height: var(--h-head);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  font-size: large;
+  font-weight: 500;
+
+  position: relative;
+  z-index: 1;
+}
+header ul {
+  display: flex;
+  column-gap: 20px;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  position: relative;
+  margin-top: calc(var(--h-head) * -1);
+}
+.list {
+  width: 100%;
+  height: 100%;
+}
+
+.list .item {
+  width: 100%;
+  height: 100%;
+  background-color: var(--backgd);
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+}
+.item .f-name{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 12rem;
+  font-weight: bold;
+  /* font-family: system-ui; */
+  /* white-space: nowrap; */
+  /* text-align: center; */
+}
+.item img.f-img {
+  width: 90%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  /* pointer-events: none; */
+}
+
+.item.active {
+  display: block;
+}
+.item.active img.f-img {
+  animation: toActive 0.5s ease-in-out 1;
+}
+.item.active .f-name {
+  animation: toActive 0.8s ease-in-out 1;
+}
+@keyframes toActive {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.item.hidden {
+  display: none;
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 1;
+}
+.item.hidden img.f-img {
+  animation: toOut 0.8s ease-in-out 1;
+  top: -100%;
+  opacity: 0;
+}
+.item.hidden .f-name {
+  opacity: 0;
+}
+@keyframes toOut {
+  from {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.carousel.right .item.active img.f-img {
+  animation: toActivePrve 0.5s ease-in-out 1;
+}
+.carousel.right .item.active .f-name {
+  animation: toActivePrve 0.8s ease-in-out 1;
+}
+.carousel.right .item.hidden img.f-img {
+  animation: toOut 0.8s ease-in-out 1;
+  top: 100%;
+  opacity: 0;
+}
+@keyframes toActivePrve {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  width: 50px;
+  height: 50px;
+  background-color: #eee5;
+  border-radius: 50%;
+  border: 1px solid #eee9;
+  color: #eee;
+  font-size: x-large;
+  
+  cursor: pointer;
+  z-index: 15;
+}
+#prev {
+  left: 20px;
+}
+#next {
+  right: 20px;
+}
+
+.leaves {
+  width: 170px;
+  height: 170px;
+  background: url(./images/leaves.png);
+  background-size: 100%;
+  
+  position: absolute;
+  top: calc((50% - (var(--h-mockup) / 1.7)));
+  left: calc((50% + (var(--w-mockup) / 5)));
+}
+
+.mockup {
+  --left : 0%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: var(--w-mockup);
+  height: var(--h-mockup);
+  background: url(./images/mockup.png) 0 0 no-repeat,url(./images/list_soda.jpg) var(--left) 0;
+  background-size: auto 100%;
+  background-blend-mode: multiply;
+
+  -webkit-mask-image: url(./images/mockup.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: auto 100%;
+  transition: background 0.5s;
+}
+
+.shadow {
+  width: var(--w-mockup);
+  height: 100px;
+  background: #0008;
+  border-radius: 50%;
+
+  position: absolute;
+  top: calc((50% + (var(--h-mockup) / 2)));
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(20px);
+}
+
+@media screen and (max-width: 768px) {
+  .item .f-name {
+    transform: translate(-50%, -50%) scale(.5);
+  }
+
+  .item img.f-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
