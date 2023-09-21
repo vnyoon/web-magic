@@ -24,3 +24,4 @@
 10. [「输入框」上的占位文本动画效果🌊](./10_wavy-input-text-animation)
 11. [水果风味的苏打水轮播图🍓](./11_fruit-flavor-soda-carousel)
 12. [「3D视觉相册」画廊展示旋转播放走马灯🏮](./12_3d-image-gallery)
+13. [「滚动绽放」实现页面滚动时逐渐展示/隐藏元素🏳️‍🌈](./13_scroll-to-reveal-animation)
