@@ -32,9 +32,7 @@ Of course I had to create the paper folding effect for the web. There’s many d
 
 Here’s a demo of it in action, using artwork by Johnny Sampson **in an issue that celebrated Jaffee’s 98th birthday**. Hover or tap to fold.
 
-这里是一个演示，使用 Johnny Sampson [在一期庆祝贾菲98岁生日](https://www.madmagazine.com/blog/2019/03/13/a-special-98th-birthday-fold-in-for-al-jaffee) 的艺术作品。**悬停** 或 **点击**可折叠。
-
-[演示地址~地址！地址！地址！！！](https://code.juejin.cn/pen/7272656580644962360)
+这里是一个演示，使用 Johnny Sampson [在一期庆祝贾菲98岁生日](https://www.madmagazine.com/blog/2019/03/13/a-special-98th-birthday-fold-in-for-al-jaffee) 的艺术作品。**悬停** 或 **点击**可折叠：[showtime！！！](https://code.juejin.cn/pen/7272656580644962360)
 
 And another by Jaffee himself.
 
