@@ -9,7 +9,7 @@
 <img
   src="./rain-preview.gif" 
   alt="rain-preview"
-  width="80%" 
+  width="60%" 
 />
 </p>
 
