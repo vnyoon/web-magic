@@ -1,10 +1,14 @@
 # 「滚动绽放」实现页面滚动时逐渐展示/隐藏元素
 
-本文将介绍如何使用`HTML`、`CSS`和`JavaScript`代码实现**页面在滚动时元素逐渐出现/隐藏**。这个动画效果会在用户滚动/隐藏页面时从不同方向逐渐显示出一组彩色方块🏳️‍🌈
+本文将介绍如何使用`HTML`、`CSS`和`JavaScript`代码实现**页面在滚动时元素逐渐出现/隐藏**。这个动画效果会在用户滚动/隐藏页面时从不同方向逐渐显示出一组彩色方块🏳️‍🌈。[showtime](https://code.juejin.cn/pen/7280462425919324220)！
 
-![preview](./scroll-reveal-preview.gif)
-
-[showtime](https://code.juejin.cn/pen/7280462425919324220)
+<p align=center>
+<img
+  src="./scroll-reveal-preview.gif" 
+  alt="scroll-reveal-rendering" 
+  width="60%" 
+/>
+</p>
 
 ## HTML结构
 首先，`HTML`部分包含了一个`<section>`元素和一个名为`container`的容器，其中包含了多个`box`元素。别忘了引入外部CSS和JS文件；
@@ -112,11 +116,13 @@ section h2 {
 
 ```
 ### 表现
+<p align=center>
 <img 
   src="./scroll-reveal-rendering.png" 
   alt="scroll-reveal-rendering" 
-  width="80%" 
+  width="60%" 
 />
+</p>
 
 ## JavaScript实现
 最后，使用`JavaScript`生成每个方块并设置了随机的背景颜色，随后将它们添加到`container`容器中，通过监听滚动事件，使方块在用户滚动页面时根据位置添加类名否，应用CSS样式实现逐渐显示或隐藏；
