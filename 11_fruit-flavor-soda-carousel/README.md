@@ -1,5 +1,13 @@
 # 水果风味的苏打水轮播
 
+<p align=center>
+<img
+  src="./fruit-carousel-preview.gif" 
+  alt="fruit-carousel-preview" 
+  width="60%" 
+/>
+</p>
+
 ## 最后
 通过HTML、CSS和JavaScript的紧密配合，成功但不是很完美的创建了一个炫酷的**水果风味的苏打水轮播**动画效果，这个动画可以渐增加网页的*吸引力*！不要犹豫🖐️，动手尝试一下；
 
