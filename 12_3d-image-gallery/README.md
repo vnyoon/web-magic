@@ -1,11 +1,15 @@
 # 「3D视觉相册」画廊展示旋转播放走马灯
 
 ## 前面
-下面本文将介绍如何使用`HTML`、`CSS`和`JavaScript`实现一个立体3D视觉效果的**中秋元素图片画廊**展示旋转播放效果。每张图片都有不同的旋转和距离设置，增加了视觉上的立体感，支持切换(上一张、下一张)播放。这样的展示效果可以从视觉上产生吸引力，以浏览不同的卡片。先看浏览效果然后进入正题吧💥！
+下面本文将介绍如何使用`HTML`、`CSS`和`JavaScript`实现一个立体3D视觉效果的**中秋元素图片画廊**展示旋转播放效果。每张图片都有不同的旋转和距离设置，增加了视觉上的立体感，支持切换(上一张、下一张)播放。这样的展示效果可以从视觉上产生吸引力，以浏览不同的卡片。先看浏览效果然后进入正题吧💥。[showtime](https://code.juejin.cn/pen/7278929410810937396)！
 
-![preview](./gallery-preview.png)
-
-[showtime](https://code.juejin.cn/pen/7278929410810937396)
+<p align=center>
+<img
+  src="./gallery-preview.png" 
+  alt="gallery-preview" 
+  width="60%" 
+/>
+</p>
 
 ## HTML
 首先，HTML部分结构是由一个类名为`container`的容器包含`.galleries`图片展示容器和`.arrows`切换按钮容器组成，用于包裹整个画廊；
