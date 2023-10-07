@@ -1,11 +1,17 @@
 # 动感波浪「输入框」上的占位文本动画效果〰️
 
-在本篇文章中，介绍如何使用纯`CSS`和`JavaScript`创建一个简单**漂亮的波浪输入框占位文本**动画效果。这个效果会为在输入框上添加的占位文本进行逐字显示和颜色渐变的动态效果，从而当用户在输入时获得更好的视觉反馈✨；
+在本篇文章中，介绍如何使用纯`CSS`和`JavaScript`创建一个简单**漂亮的波浪输入框占位文本**动画效果。这个效果会为在输入框上添加的占位文本进行逐字显示和颜色渐变的动态效果，从而当用户在输入时获得更好的视觉反馈✨。[showtime](https://code.juejin.cn/pen/7278239238078857275)！
 
-![preview](./wavy-input-preview.gif)
+<p align=center>
+<img
+  src="./wavy-input-preview.gif" 
+  alt="wavy-input-preview" 
+  width="90%" 
+/>
+</p>
+
 **<p align=center>点击使输入框聚焦/失焦以查看动画效果~</p>**
 
-[demonstrate](https://code.juejin.cn/pen/7278239238078857275)
 
 ## HTML 结构
 首先，看一下HTML结构。整个动画效果被包裹在一个具有`container`类的`div`中，该容器中包含一个`input`输入框和一个`label`标签(显示波浪动画的占位文本)；
