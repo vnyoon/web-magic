@@ -1,0 +1,65 @@
+/* google-fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@600&diaplay=swap'); */
+@import './fonts-google.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #102733;
+  color: #eee5;
+  font-family: 'Commissioner', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100px;
+  padding-inline: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  column-gap: 50px;
+}
+
+@property --rotate {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+.light {
+  font-size: 120px;
+  background: conic-gradient(from var(--rotate) at 29% 10%, #0b1012 40%, #f4f7fc55, #0b1012 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: rotateLight 3s ease-in-out infinite alternate;
+}
+@keyframes rotateLight {
+  from {
+    --rotate: 0.15turn;
+  }
+
+  to {
+    --rotate: -0.15turn;
+  }
+}
