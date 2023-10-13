@@ -63,3 +63,18 @@ header ul {
     --rotate: -0.15turn;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-inline: 20px;
+    flex-wrap: wrap;
+  }
+  header ul {
+    column-gap: 20px
+  }
+
+  .light {
+    font-size: 90px;
+  }
+}
