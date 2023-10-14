@@ -64,3 +64,11 @@ body {
   letter-spacing: 0.05em;
   transition: .25s cubic-bezier(0.5, 1, 0.5, 1.5);
 }
+
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+    font-size: 13px;
+  }
+}
