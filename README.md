@@ -27,3 +27,5 @@
 13. [「滚动绽放」实现页面滚动时逐渐展示/隐藏元素🏳️‍🌈](./13_scroll-to-reveal-animation)
 14. [「登录面板」现代登录/注册页面展示®️](./14_login-register-page)
 15. [「文本灯光」Text文本上的锥形探照灯动画效果🔦](./15_text-light-animation)
+16. [「流光边框」CSS巧妙实现元素的流动边框动画效果💥](./16_flow-border-animation)
+17. [CSS轻松实现玻璃拟态质感的卡片与:has()选择器🪟](./17_glassmorphism-cards-hover-effects)
