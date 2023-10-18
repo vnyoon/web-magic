@@ -29,3 +29,5 @@
 15. [「文本灯光」Text文本上的锥形探照灯动画效果🔦](./15_text-light-animation)
 16. [「流光边框」CSS巧妙实现元素的流动边框动画效果💥](./16_flow-border-animation)
 17. [CSS轻松实现玻璃拟态质感的卡片与:has()选择器🪟](./17_glassmorphism-cards-hover-effects)
+18. [CSS简单实现3D香烟动画🚬](./18_no-smoking)
+19. [「堆叠照片」张张都是焦点的轮播图片效果🥪](./19_stacked-photo-carousel)
