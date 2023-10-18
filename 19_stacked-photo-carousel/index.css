@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e0f1fa;
+}
+
+.image-box {
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+
+  width: 400px;
+}
+.image-box:first-child {
+  transform: rotate(23deg);
+}
+.image-box:nth-child(2) {
+  transform: rotate(328deg);
+}
+.image-box:nth-child(3) {
+  transform: rotate(169deg);
+}
+
+.image-box .image {
+  width: 100%;
+  display: block;
+  border: 1rem solid #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 5px;
+  }
+  
+  .image-box {
+    width: 150px;
+  }
+}
