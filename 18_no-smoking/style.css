@@ -67,3 +67,11 @@ body {
                20px 0 #888,
                24px 0 #999;
 }
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-color: tomato;
+    transform: scale(0.6);
+  }
+}
