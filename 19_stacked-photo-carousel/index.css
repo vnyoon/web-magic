@@ -37,10 +37,20 @@ body {
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 5px;
+    font-size: 10px;
   }
   
   .image-box {
-    width: 150px;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 4.5px;
+  }
+
+  .image-box {
+    width: 130px;
   }
 }
