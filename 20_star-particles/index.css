@@ -92,3 +92,10 @@ body {
     filter: drop-shadow(-150px 0 #3cc2ff) drop-shadow(150px 0 #3cc2ff) drop-shadow(0 -150px #3cc2ff) drop-shadow(0 150px #3cc2ff);
   }
 }
+
+
+@media screen and (max-width: 576px) {
+  .stars {
+    transform: scale(.6);
+  }
+}

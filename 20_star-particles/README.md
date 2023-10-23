@@ -1,6 +1,6 @@
 # 点亮网页的星星粒子动画效果
 
-在本篇文章中，介绍如何使用`HTML`、`CSS`实现一个**华丽的星星粒子**动画效果。这个效果会呈现**一群颜色不断变化的星星**会逐渐旋转从无到变大再到消失的状态，在页面中呈现出闪耀的星星。同时每颗星星周围会有数个粒子状的小星星环绕，粒子也会伴随着星星启动动画逐渐从无到有等，一系列的动画展现出更具活力的视觉效果🌟。[showtime]()！
+在本篇文章中，介绍如何使用`HTML`、`CSS`实现一个**华丽的星星粒子**动画效果。这个效果会呈现**一群颜色不断变化的星星**会逐渐旋转从无到变大再到消失的状态，在页面中呈现出闪耀的星星。同时每颗星星周围会有数个粒子状的小星星环绕，粒子也会伴随着星星启动动画逐渐从无到有等，一系列的动画展现出更具活力的视觉效果🌟。[showtime](https://code.juejin.cn/pen/7291597240743755831)！
 
 <p align=center>
 <img
@@ -18,6 +18,72 @@
 
 这里不要忘记引入外部图标库以及CSS文件:
 ```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4293613_mrpggi3rv8h.css">
+  <link rel="stylesheet" href="./index.css">
+  
+  <title>Star Particles</title>
+</head>
+
+<body class="flex-wrap">
+  <div class="stars flex-wrap">
+    <span style="--i: 1">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 2">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 3">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 4">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 5">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 6">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 7">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 8">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 9">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 10">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 11">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+
+    <span style="--i: 12">
+      <i class="iconfont icon-xingxing"></i>
+    </span>
+  </div>
+</body>
+
+</html>
 ```
 
 ## 添加CSS
@@ -154,6 +220,11 @@ body {
   alt="star-particles-rendering"
   width="60%"
 />
+
+### 关于
+`filter: hue-rotate()`属性设置元素颜色**动画效果**文章：
+* [CSS巧妙实现元素的流动边框动画](https://juejin.cn/post/7289072902888177701)
+* [Input输入框上的占位文本动画效果](https://juejin.cn/post/7278238985453731874)
 
 ## 最后
 通过本篇文章的详细介绍，相信能够帮助你更好地使用`CSS`来创建一个**漂亮的星星粒子**动画，从而理解掌握和应用这个效果。其中的过渡效果带来一种平滑和流畅的感觉，通过逐渐显示和颜色渐变，为网站提供了更加生动、有趣的体验。
