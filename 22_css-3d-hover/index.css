@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #1a252c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 50px;
+
+  transform-style: preserve-3d;
+}
+
+.container .box {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
+  transition: 0.5s;
+}
+
+.container .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 当鼠标悬停在 .container 元素上且其子元素不被悬停时，应用以下样式。(这里指其它四个) */
+.container:hover > :not(:hover) {
+  margin-inline: -20px;
+  filter: drop-shadow(0 0 25px #000) drop-shadow(0 0 45px #000);
+  transform: perspective(500px) rotateY(45deg) scale(0.95);
+}
+
+/* 当鼠标悬停在 .container 元素内的 .box 元素之后的兄弟元素时，应用以下样式。就是hover元素的后面兄弟元素 */
+.container .box:hover ~ .box {
+  transform: perspective(500px) rotateY(-45deg) scale(0.95);
+}
+
+.container .box:hover {
+  transform: perspective(500px) rotateY(0) scale(1.5);
+  z-index: 100;
+}
