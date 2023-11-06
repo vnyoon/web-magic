@@ -33,3 +33,4 @@
 20. [点亮网页的星星粒子动画效果🌟](./20_star-particles)
 21. [CSS创建loading动画效果🦚](./21_loading-animation)
 22. [CSS选择器创建从平凡到立体的3D独特视觉效果👁️](./22_css-3d-hover)
+23. [一切尽在CSS制作卡牌悬停动画效果之中🎴](./23_playing-card-hover)
