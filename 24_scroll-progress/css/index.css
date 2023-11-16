@@ -28,23 +28,6 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
-.warning {
-  position: fixed;
-  bottom: 0;
-
-  width: 100%;
-  text-align: center;
-  color: var(--primary-colr);
-  font-size: 1.25rem;
-  padding: 20px 0;
-}
-.warning::before {
-  content: "*";
-  position: absolute;
-  color: #f00;
-  transform: translateX(-10px);
-}
-
 nav {
   position: fixed;
 
@@ -59,7 +42,7 @@ nav {
 
 nav a {
   flex: 1;
-  
+
   font-size: 1.4rem;
   text-align: center;
   border: 2px solid #000;
@@ -67,8 +50,11 @@ nav a {
   border-bottom-width: 4px;
   transition: background-color 0.5s;
 }
+nav a:first-child {
+  border-left-width: 0;
+}
 
-nav::after {
+nav::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -88,7 +74,7 @@ nav::after {
 }
 @keyframes scrollProgress {
   100% {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -105,33 +91,7 @@ nav a:nth-child(5):hover {
   background-color: var(--r-colr);
 }
 
-.hint {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-
-  display: flex;
-  flex-direction: column;
-}
-
-.hint i {
-  font-size: 3rem;
-  color: var(--primary-colr);
-}
-
-.hint::after {
-  content: "Scroll";
-  position: absolute;
-  right: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  color: var(--primary-colr);
-}
-
 div.section {
-  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -146,6 +106,47 @@ div.section {
 .section p {
   font-size: 1.25rem;
 }
+
+.warning {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  text-align: center;
+  color: var(--primary-colr);
+  font-size: 1.25rem;
+  padding: 20px 0;
+}
+.warning::before {
+  content: "*";
+  position: absolute;
+  color: #f00;
+  transform: translateX(-10px);
+}
+
+.hint {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+}
+.hint i {
+  font-size: 3rem;
+  color: var(--primary-colr);
+}
+.hint::after {
+  content: "Scroll";
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--primary-colr);
+}
+
 
 
 @media screen and (max-width: 768px) {
