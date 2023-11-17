@@ -10,11 +10,13 @@
 />
 </p>
 
+**<p align=center>滚动进度条指示器目前仅适用于Chrome、Edge、Opera浏览器！😶</p>**
+
 ## 相关属性
 简单介绍本案例中主要使用到的`CSS`属性，具体介绍和详细用法可以点击到`MDN`查看：
 
 ### [animation-timeline](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline#browser_compatibility)
-指定用于控制CSS动画进度的时间轴。
+指定用于控制CSS动画进度的时间轴。表示动画的时间轴。
 
 `scroll()`CSS函数在这里一起使用，是指当传入一个可滚动的元素后，滚动条将为当前元素(本案例是`nav::before`)提供滚动进度时间线。
 
@@ -24,7 +26,13 @@
 ![caniuse](./images/scroll-browser-compatibility.png)
 
 ### [linear-gradient()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient)
-创建一个表示两种或多种颜色线性渐变的图像。函数需要传入两种颜色，当然还可以实现不同方向(角度)的渐变效果。如果不指定方向，默认从上到下渐变。
+创建一个表示两种或多种颜色线性渐变的图像。函数需要至少传入两种颜色，当然还可以实现不同方向(角度)的渐变效果。如果不指定方向，默认从上到下渐变。
+
+<img
+  src="./images/progress-bar-linear-gradient.png" 
+  alt="linear-gradient"
+  width="80%"
+/>
 
 #### 参考文章
 * [CSS选择器创建从平凡到立体的3D独特视觉效果](https://juejin.cn/post/7293789904482615335)
@@ -102,6 +110,7 @@
 ## 添加 CSS
 接下来，看`CSS`部分对于默认样式的重置。定义了一些颜色CSS变量方便更改。并且当文档滚动时，滚动行为设置为`smooth`平稳的滚动，使锚点跳转时的滚动也更流畅。
 ```css
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'); */
 @import './google-fonts.css';
 
 * {
@@ -135,7 +144,7 @@ body {
 ```
 下面就来一步步处理其它主要元素的样式。使用了伪元素来创建进度条，通过设置的伪元素的宽度和背景色，以及使用动画来控制进度条的变化，实现了滚动进度条的效果：
 1. 首先，对于导航部分`.nav`元素定位固定在顶部。
-  * 每个`a`元素都设置左右下边框，更能明确当前浏览到哪个区域。并且当鼠标悬浮时设置第`2~5`个的背景色。
+  * 每个`a`元素都设置左右下边框，更能明确当前浏览到哪个区域。并且通过伪类选择器选中第`2~5`个a元素，当鼠标悬浮时设置背景色(第1个会使用渐变背景设置)。
   * 使用`::before`伪元素创建水平方向的渐变背景。其中`90deg`就是`to right`。根据不同的变量定义，分为不同的色段，直到最终宽度达到`100vw`。
   ```css
   /*... */
