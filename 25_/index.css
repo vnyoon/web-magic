@@ -12,3 +12,47 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.container .card {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(45, 45, 45, 1);
+  border-radius: 20px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.container .card::before {
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(var(--clr), transparent, transparent);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.container .card:hover::before {
+  opacity: 1;
+}
+
+.container .card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 18px;
+  background-color: rgba(45, 45, 45, 0.75);
+}
