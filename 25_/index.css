@@ -56,3 +56,20 @@ body {
   border-radius: 18px;
   background-color: rgba(45, 45, 45, 0.75);
 }
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 30px;
+  }
+  
+  .container .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .container .card::before {
+    width: 300px;
+    height: 300px;
+  }
+}
