@@ -8,20 +8,20 @@
 }
 
 html {
-  --primary-colr: #fff;
+  --primary-clr: #fff;
 
-  --h-colr: #4b7eff;
-  --c-colr: #ff6464;
-  --j-colr: #ffd966;
-  --v-colr: #42b883;
-  --r-colr: #8e67cd;
+  --h-clr: #4b7eff;
+  --c-clr: #ff6464;
+  --j-clr: #ffd966;
+  --v-clr: #42b883;
+  --r-clr: #8e67cd;
 
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  color: var(--primary-colr);
+  color: var(--primary-clr);
 }
 
 body {
@@ -63,11 +63,11 @@ nav::before {
   height: 100%;
   background: linear-gradient(
     90deg, 
-    var(--h-colr) 0 20vw, 
-    var(--c-colr) 0 40vw, 
-    var(--j-colr) 0 60vw, 
-    var(--v-colr) 0 80vw, 
-    var(--r-colr) 0 100vw
+    var(--h-clr) 0 20vw, 
+    var(--c-clr) 0 40vw, 
+    var(--j-clr) 0 60vw, 
+    var(--v-clr) 0 80vw, 
+    var(--r-clr) 0 100vw
   );
   animation: scrollProgress linear;
   animation-timeline: scroll(root);  
@@ -79,16 +79,16 @@ nav::before {
 }
 
 nav a:nth-child(2):hover {
-  background-color: var(--c-colr);
+  background-color: var(--c-clr);
 }
 nav a:nth-child(3):hover {
-  background-color: var(--j-colr);
+  background-color: var(--j-clr);
 }
 nav a:nth-child(4):hover {
-  background-color: var(--v-colr);
+  background-color: var(--v-clr);
 }
 nav a:nth-child(5):hover {
-  background-color: var(--r-colr);
+  background-color: var(--r-clr);
 }
 
 div.section {
@@ -98,9 +98,9 @@ div.section {
   justify-content: center;
   align-items: center;
 
-  background-color: var(--bg-colr);
+  background-color: var(--bg-clr);
   border-bottom: 3px solid #000;
-  color: var(--primary-colr);
+  color: var(--primary-clr);
   font-size: 3.5rem;  
 }
 .section p {
@@ -113,7 +113,7 @@ div.section {
 
   width: 100%;
   text-align: center;
-  color: var(--primary-colr);
+  color: var(--primary-clr);
   font-size: 1.25rem;
   padding: 20px 0;
 }
@@ -135,7 +135,7 @@ div.section {
 }
 .hint i {
   font-size: 3rem;
-  color: var(--primary-colr);
+  color: var(--primary-clr);
 }
 .hint::after {
   content: "Scroll";
@@ -144,7 +144,7 @@ div.section {
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.5rem;
-  color: var(--primary-colr);
+  color: var(--primary-clr);
 }
 
 
