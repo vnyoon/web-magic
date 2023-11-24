@@ -26,10 +26,11 @@
   - [offsetTop]()：当前元素相对于 `offsetParent` 元素顶部内边距的距离。
 * [radial-gradient()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/radial-gradient)
 默认用径向渐变创建出椭圆色彩"图像"。创建径向渐变最少需要传入两个颜色值。可以更改形状、大小、渐变的位置以及颜色起止位置。
+
 <img
   src="./images/glowing-corner-radial-gradient.png" 
   alt="glowing-corner-radial-gradient" 
-  width="70%"
+  width="80%"
 />
 
 ## HTML 结构
