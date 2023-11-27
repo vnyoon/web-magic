@@ -36,4 +36,4 @@
 23. [一切尽在CSS制作卡牌悬停动画效果之中🎴](./23_playing-card-hover)
 24. [CSS一步步制作全屏滚动进度条指示器🛬](./24_scroll-progress)
 24. [创建元素悬停发光边角/边框效果⬛](./25_glowing-corner-hover)
-26. [_](./26_)
+26. [无限滚动文本和图像的动画效果](./26_infinite-scrolling-animation)
