@@ -20,8 +20,6 @@ body {
 }
 
 .scroll {
-  position: relative;
-
   display: flex;
   width: 700px;
   overflow: hidden;
@@ -83,5 +81,22 @@ body {
 
   100% {
     transform: translateX(-200%);
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .scroll {
+    width: 90vw;
+  }
+
+  .scroll > div span {
+    background-color: #4caf50;
+  }
+
+  .img-box img {
+    width: 33vw;
+    filter: grayscale(0);
   }
 }
