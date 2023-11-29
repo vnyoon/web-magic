@@ -3,3 +3,111 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --bg: #222;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; color: #555; }
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  padding-inline: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+ul li {
+  position: relative;
+
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  /* 模糊半径：10，20，22 */
+  box-shadow: 0 0 0 10px var(--clr), 
+              0 0 0 20px var(--bg), 
+              0 0 0 22px var(--clr);
+  transition: 0.5s;
+}
+ul li:hover::before { 
+  inset: 15px;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-color: var(--bg); */
+  background-color: #111;
+  /*展示::before四角阴影  */
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+ul li:hover::after {
+  /*盖住::before阴影  */
+  inset: -10px;
+  transform: rotate(0deg);
+}
+ul li:nth-child(even):hover::after {
+  /*展示::before阴影  */
+  inset: 0px;
+}
+
+ul li a {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li a i {
+  font-size: 2em;
+  color: var(--clr);
+
+  transition: transform 0.5s;
+}
+ul li:hover a i {
+  transform: translateY(-40%);
+}
+
+ul li a span {
+  position: absolute;
+
+  color: var(--clr);
+  font-family: consolas;
+
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: scale(0) translateY(200%);
+}
+ul li:hover a span { 
+  opacity: 1;
+  transform: scale(1) translateY(100%);
+}
+
+ul li:hover a i,
+ul li:hover a span {
+  filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+}
