@@ -57,8 +57,8 @@ ul li::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* background-color: var(--bg); */
-  background-color: #111;
+  background-color: var(--bg);
+  
   /*展示::before四角阴影  */
   transform: rotate(45deg);
   transition: 0.5s;
@@ -109,5 +109,7 @@ ul li:hover a span {
 
 ul li:hover a i,
 ul li:hover a span {
-  filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+  filter: drop-shadow(0 0 20px var(--clr)) 
+          drop-shadow(0 0 40px var(--clr)) 
+          drop-shadow(0 0 60px var(--clr));
 }
