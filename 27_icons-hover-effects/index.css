@@ -58,18 +58,17 @@ ul li::after {
   position: absolute;
   inset: 0;
   background-color: var(--bg);
-  
-  /*展示::before四角阴影  */
+  /*错位展示::before四角阴影  */
   transform: rotate(45deg);
   transition: 0.5s;
 }
 ul li:hover::after {
-  /*盖住::before阴影  */
-  inset: -10px;
+   /*复原盖住::before阴影  */
   transform: rotate(0deg);
+  inset: -10px;
 }
 ul li:nth-child(even):hover::after {
-  /*展示::before阴影  */
+  /*偶数展示::before阴影  */
   inset: 0px;
 }
 
@@ -99,8 +98,8 @@ ul li a span {
   font-family: consolas;
 
   opacity: 0;
-  transition: opacity 0.5s, transform 0.5s;
   transform: scale(0) translateY(200%);
+  transition: opacity 0.5s, transform 0.5s;
 }
 ul li:hover a span { 
   opacity: 1;
