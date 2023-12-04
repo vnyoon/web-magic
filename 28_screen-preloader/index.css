@@ -25,7 +25,7 @@ body {
 .aqua {
   position: relative;
   
-  width: 80vw;
+  width: 70vw;
   max-width: 500px;
   padding: 10px;
   border-radius: 50px;
@@ -53,6 +53,7 @@ body {
   position: relative;
 
   width: 0;
+  /* width: 10% */
   height: 10px;
   background-color: var(--primary-color);
   border-radius: 20px;
@@ -60,7 +61,7 @@ body {
 
 .number {
   position: absolute;
-  top: -64px;
+  top: -66px;
   right: -55px;
 
   padding: 10px 15px;
@@ -78,14 +79,12 @@ h2 {
 
   font-size: 4em;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
   color: #fff;
 
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 0.5s, opacity 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
   transition-delay: 0.5s;
 }
 
