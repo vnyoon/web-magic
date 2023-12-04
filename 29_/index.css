@@ -4,3 +4,94 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #fff;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #222;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+
+  width: 400px;
+  height: 400px;
+
+  border: 80px solid transparent;
+  border-right-color: #fff5;
+  border-bottom-color: #fff5;
+  border-radius: 50%;
+  
+  transform: rotate(45deg);
+  animation: animateBox 2s linear infinite;
+}
+@keyframes animateBox {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }  
+}
+
+.box::before {
+  content: "";
+  
+  width: 80px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  
+  position: absolute;
+  top: 212px;
+  left: -34px;
+}
+
+.box::after {
+  content: "";
+  
+  width: 80px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  
+  position: absolute;
+  bottom: 212px;
+  right: -34px;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: inset 0px 5px 20px rgba(0, 0, 0, 0.5);
+  
+  transform-origin: 200px;
+  animation: animateBall 2s linear infinite;  
+  
+  position: absolute;
+  z-index: 10;
+  top: 65px;
+  left: -95px;
+}
+@keyframes animateBall {
+  0%, 100% {
+    transform: rotate(135deg);
+  }
+
+  50% {
+    transform: rotate(-45deg);
+  }
+}
