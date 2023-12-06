@@ -39,4 +39,4 @@
 26. [无限滚动文本和图像的动画效果🎢](./26_infinite-scrolling-animation)
 27. [赋予图标动感十足的悬停交互效果🏠](./27_icons-hover-effects)
 28. [简单生动的屏幕预加载动画效果🐌](./28_screen-preloader)
-29. [「律动之光」图形与炫彩背景的交互动画效果](./29_collision-random-bg)
+29. [「律动之光」图形与炫彩背景的交互动画效果⚪](./29_collision-random-bg)
