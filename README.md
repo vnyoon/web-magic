@@ -40,3 +40,4 @@
 27. [赋予图标动感十足的悬停交互效果🏠](./27_icons-hover-effects)
 28. [简单生动的屏幕预加载动画效果🐌](./28_screen-preloader)
 29. [「律动之光」图形与炫彩背景的交互动画效果⚪](./29_collision-random-bg)
+30. [交错旋转的漩涡背景动画效果🌀](./30_swirl-background)
