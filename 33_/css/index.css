@@ -12,7 +12,8 @@
 body {
   min-height: 100vh;
   background-color: #222;
-
+  font-family: 'Roboto', sans-serif;
+  
   overflow: hidden;
   cursor: none;
 }
