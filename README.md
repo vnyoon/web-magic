@@ -42,3 +42,5 @@
 29. [「律动之光」图形与炫彩背景的交互动画效果⚪](./29_collision-random-bg)
 30. [交错旋转的漩涡背景动画效果🌀](./30_swirl-background)
 31. [创意列表交互：带有焦点的排行榜悬停效果🏅](./31_list-hover)
+32. [丰富的CSS Loading动画，给网页注入活力🔶](./32_simple-loading-animation)
+33. [圆形文本鼠标光标动画效果🏵️](./33_circle-text-mousemove)
